@@ -1,6 +1,6 @@
 {
   "name": "tonton",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A static site generator for node.js heavily inspired by ruby's jekyll",
   "bin": {
     "tonton": "./bin/tonton"
