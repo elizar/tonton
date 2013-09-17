@@ -1,0 +1,38 @@
+{
+  "name": "tonton",
+  "version": "0.0.1",
+  "description": "A static site generator for node.js heavily inspired by ruby's jekyll",
+  "bin": {
+    "tonton": "./bin/tonton"
+  },
+  "scripts": {
+    "test": "tap test/*"
+  },
+  "homepage": "https://github.com/elizar/tonton.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elizar/tonton.git"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "generator",
+    "html5",
+    "blog",
+    "css",
+    "jekyll"
+  ],
+  "author": "Elizar Pepino",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "~2.0.0",
+    "marked": "~0.2.9",
+    "mkdirp": "~0.3.5",
+    "highlight.js": "~7.3.0",
+    "jade": "~0.35.0",
+    "co-prompt": "~1.0.0"
+  },
+  "devDependencies": {
+    "tap": "*"
+  }
+}

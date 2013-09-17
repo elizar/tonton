@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+'use strict';
+var program = require('commander'),
+    prompt = require('co-prompt'),
+    confirm = prompt.confirm,
+    version = require('../package.json').version,
+    tonton = require('../lib/tonton');
+
+program
+  .version(version)
+  .option('-n, --name [name]', 'Name of your site (optional)');
+
+program
+  .command('new [path]')
+  .description('Generate skeleton/scaffold')
+  .action(tonton);
+
+program
+  .command('serve [port]')
+  .description('Build site and launch http server for serving static files.')
+  .action(tonton.serve);
+
+program
+  .command('build')
+  .description('Build site.')
+  .action(tonton.build);
+program
+  .on('help', function () {
+    return program.help();
+  });
+
+program.parse(process.argv);
