@@ -1,0 +1,11 @@
+
+extends layout
+  block content
+    article.article
+      header
+        h1=post.title
+        p Published on  !{post.date}
+      .post-body!= marked(post.body)
+
+      footer.footer
+        p.tags= post.tags.join(', ');

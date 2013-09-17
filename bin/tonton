@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 var program = require('commander'),
-    prompt = require('co-prompt'),
-    confirm = prompt.confirm,
     version = require('../package.json').version,
     tonton = require('../lib/tonton');
 
 program
   .version(version)
-  .option('-n, --name [name]', 'Name of your site (optional)');
+  .option('-i, --interactive', 'Will run you through the config setup.');
 
 program
   .command('new [path]')
@@ -30,3 +28,10 @@ program
   });
 
 program.parse(process.argv);
+
+/**
+ * If argvs is empty, print help
+ * */
+if (program.args.length === 0) {
+  program.help();
+}

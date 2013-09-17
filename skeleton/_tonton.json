@@ -1,1 +1,8 @@
-{}
+{
+ "title" : "TonTon",
+ "subtitle" : "oink oink",
+ "author" : "Elizar Pepino",
+ "email" : "hello@elizarpepino.com",
+ "outputDir" : ".",
+ "theme" : "oink"
+}
